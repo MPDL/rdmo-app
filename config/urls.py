@@ -3,6 +3,8 @@ from django.urls import include, path
 
 from rdmo.core.views import about, home
 
+from rdmo_theme.views import impressum, privacy_policy, FAQs, quickstart
+
 urlpatterns = [
     path('', home, name='home'),
     path('about/', about, name='about'),
@@ -12,6 +14,11 @@ urlpatterns = [
     path('api/v1/', include('rdmo.core.urls.swagger')),
 
     path('admin/', admin.site.urls),
+
+    path('impressum/', impressum, name='impressum'),
+    path('privacy_policy/', privacy_policy, name='privacy_policy'),
+    path('FAQs/', FAQs, name='FAQs'),
+    path('quickstart/', quickstart, name='quickstart'),
 ]
 
 handler400 = 'rdmo.core.views.bad_request'

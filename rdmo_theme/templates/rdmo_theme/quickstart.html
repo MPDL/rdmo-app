@@ -1,0 +1,17 @@
+{% extends 'core/page.html' %}
+{% load i18n %}
+
+{% block page %}
+
+<p>
+    {% get_current_language as lang %}
+    {% if lang == 'en' %}
+        {% include 'rdmo_theme/quickstart_en.html' %}
+    {% elif lang == 'de' %}
+        {% include 'rdmo_theme/quickstart_de.html' %}
+    {% endif %}
+</p>
+
+{% endblock %}
+
+
