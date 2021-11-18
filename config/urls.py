@@ -19,7 +19,7 @@ urlpatterns = [
     path('privacy_policy/', privacy_policy, name='privacy_policy'),
     path('FAQs/', FAQs, name='FAQs'),
     path('quickstart/', quickstart, name='quickstart'),
-    path('shibboleth-ds/', login_form_sso, name='login_form_sso'),
+    path('shibboleth-ds/login_form_sso/', login_form_sso, name='login_form_sso'),
 ]
 
 handler400 = 'rdmo.core.views.bad_request'
