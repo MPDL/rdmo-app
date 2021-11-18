@@ -11,3 +11,6 @@ def FAQs(request):
 
 def quickstart(request):
     return render(request, 'rdmo_theme/quickstart.html')
+
+def login_form_sso(request):
+    return render(request, 'rdmo_theme/login_form_sso.html')
