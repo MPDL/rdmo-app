@@ -9,7 +9,7 @@ function IdPSelectUIParms(){
     this.defaultLanguage = 'de';     // Language to use if the browser local doesnt have a bundle
     this.defaultLogo = 'https://rdmo.mpdl.mpg.de/static/core/img/header/mpg-logo-vector.svg';  // Replace with your own logo
     this.defaultLogoWidth = 196;
-    this.defaultLogoHeight = 54 ;
+    this.defaultLogoHeight = 196 ;
     this.defaultReturn = null;       // If non null, then the default place to send users who are not
                                      // Approaching via the Discovery Protocol for example
     //this.defaultReturn = "https://example.org/Shibboleth.sso/DS?SAMLDS=1&target=https://example.org/secure";
