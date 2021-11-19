@@ -3,7 +3,7 @@ from django.urls import include, path
 
 from rdmo.core.views import about, home
 
-from rdmo_theme.views import impressum, privacy_policy, FAQs, quickstart
+from rdmo_theme.views import impressum, privacy_policy, FAQs, quickstart, login_form_sso
 
 urlpatterns = [
     path('', home, name='home'),
@@ -19,6 +19,7 @@ urlpatterns = [
     path('privacy_policy/', privacy_policy, name='privacy_policy'),
     path('FAQs/', FAQs, name='FAQs'),
     path('quickstart/', quickstart, name='quickstart'),
+    path('shibboleth-ds/login_form_sso/', login_form_sso, name='login_form_sso'),
 ]
 
 handler400 = 'rdmo.core.views.bad_request'
