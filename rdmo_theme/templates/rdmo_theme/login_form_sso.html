@@ -1,33 +1,51 @@
-{% load i18n %}
+{% extends 'core/base.html' %}
 
-<div id="idpSelectIdPSelector">
-    <div id="idpSelectPreferredIdPTile">
-        <div class="IdPSelectTextDiv">Our suggested selection:</div>
-        <div class="IdPSelectPreferredIdPButton" title="Max-Planck Society">
-            <a href="https://rdmo.mpdl.mpg.de/Shibboleth.sso/Login?SAMLDS=1&amp;target=ss%3Amem%3A272e1e91e2c92acfb2ccfa32250ee26e058a89c50e14a141415dc3a8c2efbc83&amp;entityID=https%3A%2F%2Flogine.mpg.de%2Fsimplesaml%2Fsaml2%2Fidp%2Fmetadata.php">
-                <div class="IdPSelectPreferredIdPImg">
-                    <img class="IdPSelectIdPImg" src="/static/core/img/header/mpg-logo-vector.svg"
-                         alt="Max-Planck Society"
-                         width="196" height="196"></div>
-            </a>
+{% block content %}
+<div class="container page">
+    <h2><b>Log In</b></h2>
+
+    <div id="idpSelectIdPSelector">
+        <div id="idpSelectPreferredIdPTile">
+            <div class="IdPSelectTextDiv">Our suggested selections:</div>
+            <div style="display: inline-flex; width: 50%;">
+                <div class="IdPSelectPreferredIdPButton" title="Max-Planck Society">
+                    <a href="https://rdmo.mpdl.mpg.de/Shibboleth.sso/Login?SAMLDS=1&amp;target=ss%3Amem%3A272e1e91e2c92acfb2ccfa32250ee26e058a89c50e14a141415dc3a8c2efbc83&amp;entityID=https%3A%2F%2Flogine.mpg.de%2Fsimplesaml%2Fsaml2%2Fidp%2Fmetadata.php">
+                        <div class="IdPSelectPreferredIdPImg">
+                            <img class="IdPSelectIdPImg" src="/static/core/img/header/mpg-logo-vector.svg"
+                                 alt="Max-Planck Society"
+                                 width="196" height="196"></div>
+                    </a>
+                </div>
+                <div class="IdPSelectPreferredIdPButton" title="Academic Cloud">
+                <a href="https://rdmo.mpdl.mpg.de/Shibboleth.sso/Login?SAMLDS=1&amp;target=ss%3Amem%3A272e1e91e2c92acfb2ccfa32250ee26e058a89c50e14a141415dc3a8c2efbc83&amp;entityID=https%3A%2F%2Fsso.academiccloud.de%2Fsimplesaml%2Fsaml2%2Fidp%2Fmetadata.php">
+                    <div class="IdPSelectPreferredIdPImg">
+                        <img class="IdPSelectIdPImg" src="/static/core/img/header/Academic_Cloud.jpg"
+                             alt="Academic Cloud"
+                             width="417" height="121"
+                             style="margin-left: 10px; display: block; margin-top: auto; margin-bottom: auto; height: 100%; width: 100%"></div>
+                </a>
+            </div>
+            </div>
+        </div>
+
+        <div id="idpSelectIdPListTile">
+            <form action="https://rdmo.mpdl.mpg.de/Shibboleth.sso/Login" method="GET" autocomplete="OFF">
+                <input type="hidden" name="SAMLDS" value="1">
+                <input type="hidden" name="target" value="ss:mem:bb9e6c3b8ced188d1aa85093fd03adf2109a8def93af00c8f3616e6d10079e24">
+                <div class="IdPSelectTextDiv">
+                    <p>Or select your organization from the list below</p>
+                </div>
+                <div style="display: inline-flex; width: 50%;">
+                <select id="idpSelectSelector" name="entityID" class="form-control">
+                    <option value="-">Please select your organization ...</option>
+                    <option value="https://sso.academiccloud.de/simplesaml/saml2/idp/metadata.php">Cooperation Partners</option>
+                    <option value="https://logine.mpg.de/simplesaml/saml2/idp/metadata.php">Max-Planck Society</option>
+                </select>
+                <input type="submit" class="btn btn-primary" value="Continue" id="idpSelectListButton" style=" margin-left: 10px;">
+                </div>
+            </form>
         </div>
     </div>
 
-    <div id="idpSelectIdPListTile">
-        <form action="https://rdmo.mpdl.mpg.de/Shibboleth.sso/Login" method="GET" autocomplete="OFF">
-            <input type="hidden" name="SAMLDS" value="1">
-            <input type="hidden" name="target" value="ss:mem:bb9e6c3b8ced188d1aa85093fd03adf2109a8def93af00c8f3616e6d10079e24">
-            <div class="IdPSelectTextDiv">
-                <p>Or select your organization from the list below</p>
-            </div>
-            <div style="display: inline-flex; width: 50%;">
-            <select id="idpSelectSelector" name="entityID" class="form-control">
-                <option value="-">Please select your organization ...</option>
-                <option value="https://sso.academiccloud.de/simplesaml/saml2/idp/metadata.php">Cooperation Partners</option>
-                <option value="https://logine.mpg.de/simplesaml/saml2/idp/metadata.php">Max-Planck Society</option>
-            </select>
-            <input type="submit" class="btn btn-primary" value="Continue" id="idpSelectListButton" style=" margin-left: 10px;">
-            </div>
-        </form>
-    </div>
 </div>
+{% endblock %}
