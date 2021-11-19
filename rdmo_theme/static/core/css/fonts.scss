@@ -1,12 +1,12 @@
 @font-face {
     font-family: "Roboto";
     src: url(static('core/fonts/Roboto-Regular.ttf')); }
-  
+
 @font-face {
     font-family: "Roboto";
     src: url(static('core/fonts/Roboto-Bold.ttf'));
     font-weight: bold; }
-  
+
 @font-face {
     font-family: "Roboto-Light";
     src: url(static('core/fonts/Roboto-Light.ttf')); }
@@ -53,8 +53,11 @@
 body {
     font-family: Roboto, sans;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
     font-family: Roboto-bold, sans;
+}
+h2 {
+    font-family: "DroidSerif", Times, serif;
 }
 
 a.fa {

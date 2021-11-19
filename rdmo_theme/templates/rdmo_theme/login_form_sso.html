@@ -1,4 +1,14 @@
-{% extends 'core/base.html' %}
+{% extends 'core/page.html' %}
+{% load static %}
+{% load compress %}
+{% load i18n %}
+
+{% block head %}
+    {% compress js %}
+    <script type="text/javascript" src="{% static 'core/js/idpselect.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'core/js/idpselect_config.js' %}" ></script>
+    {% endcompress %}
+{% endblock %}
 
 {% block content %}
 <div class="container page">
