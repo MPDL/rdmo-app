@@ -19,19 +19,16 @@ h5, h6 {
     line-height: 20px;
 }
 
+h1, h2, h3, h4 {
+    font-weight: medium;
+}
+
 h1 {
     font-size: 28px;
-    font-family: Roboto-bold, sans;
 }
-
-h2, h3, h4, h5, h6 {
-    font-family: "DroidSerif", Times, serif;
-}
-
 h2 {
     font-size: 24px;
 }
-
 .sidebar h2,
 .modal h2 {
     font-size: 20px;
@@ -42,6 +39,7 @@ h3 {
 h4 {
     font-size: 14px;
 }
+
 form {
     margin-bottom: 20px;
 }
