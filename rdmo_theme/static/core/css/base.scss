@@ -1,9 +1,9 @@
-@import 'core/css/variables';
-@import 'core/css/fonts';
+@import 'core/css/variables.scss';
 
 html, body {
     height: 100%;
     background-color: $background-color;
+    font-family: Roboto, sans;
 }
 
 h1, h2, h3, h4 {
@@ -11,12 +11,18 @@ h1, h2, h3, h4 {
     background-color: $headline-background-color;
     line-height: 40px;
 }
+
 h5, h6 {
     color: $headline-color;
     background-color: $headline-background-color;
     font-size: medium;
     line-height: 20px;
 }
+
+h1, h2, h3, h4 {
+    font-weight: medium;
+}
+
 h1 {
     font-size: 28px;
 }
@@ -33,6 +39,7 @@ h3 {
 h4 {
     font-size: 14px;
 }
+
 form {
     margin-bottom: 20px;
 }
@@ -66,6 +73,10 @@ a {
             color: white;
         }
     }
+}
+
+a.fa {
+    text-decoration: none !important;
 }
 
 code {
@@ -137,7 +148,7 @@ table {
         background-color: $navigation-hover-background-color;
     }
     .navbar-brand {
-        background-image: url("../../core/img/header/mpg.png");
+        background-image: url(static('core/img/header/mpg.png'));
         background-size: 60px 50px;
         background-repeat: no-repeat;
         background-position: 5px 1px;

@@ -10,14 +10,17 @@
 {% endblock %}
 
 {% block page %}
+<div class="container page">
 
-<p>
     {% get_current_language as lang %}
     {% if lang == 'en' %}
         {% include 'rdmo_theme/login_form_sso_en.html' %}
     {% elif lang == 'de' %}
         {% include 'rdmo_theme/login_form_sso_de.html' %}
     {% endif %}
-</p>
-
+    {% compress js %}
+        <script type="text/javascript" src="{% static 'core/js/idpselect_config.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'core/js/idpselect.js' %}" ></script>
+    {% endcompress %}
+</div>
 {% endblock %}

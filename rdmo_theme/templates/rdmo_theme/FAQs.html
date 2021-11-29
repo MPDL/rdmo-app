@@ -3,14 +3,12 @@
 
 {% block page %}
 
-<p>
     {% get_current_language as lang %}
     {% if lang == 'en' %}
         {% include 'rdmo_theme/FAQs_en.html' %}
     {% elif lang == 'de' %}
         {% include 'rdmo_theme/FAQs_de.html' %}
     {% endif %}
-</p>
 
 {% endblock %}
 

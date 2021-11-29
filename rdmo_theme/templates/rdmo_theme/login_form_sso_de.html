@@ -1,13 +1,2 @@
-{% load static %}
-{% load compress %}
-{% load i18n %}
-
-<div class="container page">
-    <h2><b>Einloggen</b></h2>
-    <div id="idpSelect"></div>
-    {% compress js %}
-        <script type="text/javascript" src="{% static 'core/js/idpselect_config.js' %}" ></script>
-        <script type="text/javascript" src="{% static 'core/js/idpselect.js' %}" ></script>
-    {% endcompress %}
-</div>
-
+<h2><b>Einloggen</b></h2>
+<div id="idpSelect"></div>
