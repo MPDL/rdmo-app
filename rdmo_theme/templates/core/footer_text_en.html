@@ -29,7 +29,7 @@
     </div>
 </div>
 <!-- Matomo -->
-<script>
+<script type="text/plain" data-category="analytics">
     var _paq = window._paq = window._paq || [];
     /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
     _paq.push(['trackPageView']);
@@ -43,3 +43,11 @@
     })();
   </script>
   <!-- End Matomo Code -->
+<script defer src="https://edmond.mpdl.mpg.de/mpdl-consent/consent-config-mpdl.js"></script>
+
+<script defer>
+        window.addEventListener('load', ()=> {
+            runConsentBanner({'privacyPolicyUrl' : '/privacy_policy'});
+        });
+
+</script>
