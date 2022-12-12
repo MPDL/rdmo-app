@@ -42,11 +42,11 @@
       g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
     })();
   </script>
-  <!-- End Matomo Code -->
+<!-- End Matomo Code -->
+<script defer src="https://assets.mpdl.mpg.de/static/mpdl-consent/consent-config-matomo.js"></script>
 
 <script defer>
-        window.addEventListener('load', ()=> {
-            runConsentBanner({'privacyPolicyUrl' : '/privacy_policy'});
-        });
-
+    window.addEventListener('load', () => {
+        runConsentBanner({ 'privacyPolicyUrl': '/privacy_policy' });
+    });
 </script>
