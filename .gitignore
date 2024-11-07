@@ -6,8 +6,6 @@ __pycache__/
 *.swp
 .DS_*
 
-/config/settings/local.py
-/config/settings/local_mpdl_theme.py
 /static_root
 /media_root
 /vendor
