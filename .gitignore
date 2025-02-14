@@ -6,6 +6,9 @@ __pycache__/
 *.swp
 .DS_*
 
+pandoc-*-amd64.deb
+/config/settings/local.py
+
 /static_root
 /media_root
 /vendor
