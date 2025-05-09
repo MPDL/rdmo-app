@@ -152,7 +152,7 @@ class MAUSExport(Export):
             'form_choice_file_path': 'README.md',
             'render_function': render_from_view,
             'render_function_kwargs': {
-                'view_uri': 'https://dev-rdmo.int.mpdl.mpg.de/terms/views/smp_readme',
+                'view_uri': 'https://rdmo.mpdl.mpg.de/terms/views/smp-readme',
                 'title': 'README.md',
                 'export_format': 'markdown'
             }
@@ -162,7 +162,7 @@ class MAUSExport(Export):
             'form_choice_file_path': 'CITATION.cff',
             'render_function': render_from_view,
             'render_function_kwargs': {
-                'view_uri': 'https://dev-rdmo.int.mpdl.mpg.de/terms/views/smp_citation',
+                'view_uri': 'https://rdmo.mpdl.mpg.de/terms/views/smp-citation',
                 'title': 'CITATION.cff',
                 'export_format': 'plain'
             }
