@@ -487,3 +487,13 @@ li.has-warning > a.control-label > i {
     text-decoration: underline;
     text-decoration-style: dotted;
 }
+
+.login-form-container {
+    /* up to max tablet screen size, no margin-top (login form displayed below core/home_text).
+    Afterward set margin-top to match core/home_text's <h2> total height, 
+    so that login form aligns with core/home_text's first <p> block 
+    (h2 total height = 40px + 20px margin-top + 10px margin-bottom) */ 
+    @media (min-width: $screen-sm-max) {
+        margin-top: 70px;
+    }
+}
