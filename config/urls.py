@@ -3,7 +3,7 @@ from django.urls import include, path
 
 from rdmo.core.views import about, api, home
 
-from rdmo_theme.views import impressum, privacy_policy, FAQs, quickstart, login_form_sso
+from rdmo_theme.views import FAQs, impressum, login_form_sso, privacy_policy, quickstart
 
 urlpatterns = [
     path('', home, name='home'),
