@@ -1,4 +1,5 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render
+
 
 def impressum(request):
     return render(request, 'rdmo_theme/impressum.html')
