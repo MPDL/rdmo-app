@@ -6,19 +6,16 @@ __pycache__/
 *.swp
 .DS_*
 
-pandoc-*-amd64.deb
-/config/settings/local.py
+/config/settings/local*
 
 /static_root
 /media_root
-/vendor
+
 /log
 /env
+
 /*.sqlite3
-/.coverage
-/.pytest_cache
-/htmlcov
+
 /themes
-/theme
 /plugins
 /scripts
